@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HSK 3 第11—15课复习测试</title>
+<style>
+:root{--bg1:#cde3f9;--bg2:#b3d2f2;--card:#ffffffdb;--ink:#12303a;--mute:#4d6b74;--acc:#1b6f8f;--line:#b4d2d8;--ok:#1b8a4b;--okbg:#d3f2dc;--no:#c0392b;--nobg:#fbdad5;--chip:#e6f4f3;--bar:#d9ebf2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0b1f38;--bg2:#0d2b4f;--card:#12303ddb;--ink:#e3f2f1;--mute:#9dbcc0;--acc:#6cc3e3;--line:#2b5560;--ok:#6fdc97;--okbg:#14452c;--no:#ff8f82;--nobg:#4a2220;--chip:#17404a;--bar:#10303c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#0b1f38;--bg2:#0d2b4f;--card:#12303ddb;--ink:#e3f2f1;--mute:#9dbcc0;--acc:#6cc3e3;--line:#2b5560;--ok:#6fdc97;--okbg:#14452c;--no:#ff8f82;--nobg:#4a2220;--chip:#17404a;--bar:#10303c;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg1);background-image:linear-gradient(160deg,var(--bg1),var(--bg2));background-attachment:fixed;color:var(--ink);font:16px/1.6 system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:10}
+.zh{font-family:KaiTi,"楷体","楷体_GB2312",STKaiti,"Kaiti SC","Kaiti TC","AR PL UKai CN","BiauKai",serif;font-size:1.2rem}
+header{padding:22px 16px 6px;text-align:center}
+h1{margin:0;font-size:1.7rem;color:var(--acc)}h1 .zh{font-size:2rem}
+header p{margin:4px 0;color:var(--mute)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bar);border-bottom:1px solid var(--line);padding:8px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.bar b{font-size:1.25rem;color:var(--acc)}
+main{max-width:820px;margin:0 auto;padding:0 14px 50px}
+h2{margin:30px 0 8px;font-size:1.3rem;border-left:5px solid var(--acc);padding-left:10px}h2 small,h3 small{color:var(--mute);font-weight:400;font-size:.85rem}
+h3{margin:18px 0 6px;font-size:1.05rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;margin:10px 0}
+.card.play{outline:2px solid var(--acc)}
+.qt{display:flex;gap:10px;align-items:baseline}
+.n{flex:none;background:var(--acc);color:var(--bg1);border-radius:50%;width:24px;height:24px;display:inline-grid;place-items:center;font-size:.8rem;font-weight:700}
+.opts{display:grid;gap:7px;margin-top:9px}
+.opt,.btn,.chip{font:inherit;color:var(--ink);cursor:pointer}
+.opt{display:flex;gap:10px;align-items:baseline;text-align:left;background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.opt:hover,.chip:hover{border-color:var(--acc)}
+.btn{background:var(--acc);color:var(--bg1);border:0;border-radius:10px;padding:7px 14px;font-size:.95rem;font-weight:600}
+.btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+.ok{background:var(--okbg)!important;border-color:var(--ok)!important}
+.no{background:var(--nobg)!important;border-color:var(--no)!important}
+.fb{margin-top:8px;font-size:.92rem;font-weight:600}.fb.g{color:var(--ok)}.fb.r{color:var(--no)}
+.fb .zh{font-size:1.1rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;display:grid;gap:10px}
+.panel label{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--mute);flex-wrap:wrap}
+.panel select{font:inherit;background:var(--chip);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 6px;max-width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+#warn{display:none;background:var(--nobg);border:1px solid var(--no);border-radius:10px;padding:8px 12px;font-size:.9rem}
+.tr{display:none;margin-top:8px;color:var(--mute);border-top:1px dashed var(--line);padding-top:6px}
+body.showT .tr{display:block}
+.tr div{font-size:1.1rem}
+.bank{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.bank span,.chip{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:3px 12px}
+select.zh,input.zh,textarea.zh{background:var(--chip);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:3px 6px;max-width:100%}
+input.zh{flex:1;min-width:200px;padding:7px 10px}
+textarea.zh{width:100%;min-height:62px;margin-top:8px;padding:7px 10px}
+.ans,.pool{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;min-height:44px;padding:6px;border-radius:10px}
+.ans{border:2px dashed var(--line)}
+.passage{line-height:2;text-indent:2em}
+.passage p{margin:.3em 0}
+.mute{color:var(--mute);font-size:.9rem}
+@media (max-width:480px){h1{font-size:1.35rem}.zh{font-size:1.12rem}}
+</style>
+</head>
+<body>
+<header>
+<h1 class="zh">HSK 3 第11—15课复习测试</h1>
+<p class="zh">考试时间：60分钟　满分：100分</p>
+</header>
+<div class="bar">
+<span>Điểm tự chấm: <b id="score">0</b> / 75 <span class="mute">(phần 六 tự đánh giá, 15 điểm)</span></span>
+<button class="btn ghost" id="reset">Làm lại</button>
+</div>
+<main>
+<h2>一、听力理解 <small>10分 · 约8分钟 · 听两遍录音，每题2分</small></h2>
+<div class="panel">
+<div id="warn">Trình duyệt/thiết bị này chưa có giọng đọc tiếng Trung (普通话). Hãy mở bằng <b>Microsoft Edge</b> (có giọng “Natural” rất tự nhiên), Chrome, hoặc Safari rồi cài giọng 中文（中国大陆）trong cài đặt hệ thống.</div>
+<label>Giọng nữ 女: <select id="vf"></select></label>
+<label>Giọng nam 男: <select id="vm"></select></label>
+<label>Tốc độ: <select id="rate"><option value="0.7">Chậm</option><option value="0.85" selected>Vừa</option><option value="1">Bình thường</option></select>
+<span style="margin-left:10px"><input type="checkbox" id="twice" checked> Nghe 2 lần</span></label>
+<label>Giọng nữ: <select id="pit"><option value="1">Tự nhiên</option><option value="1.12" selected>Thanh hơn</option><option value="1.25">Rất thanh</option></select></label>
+<div class="row"><button class="btn" id="all">▶ Nghe toàn bộ 5 câu</button><button class="btn ghost" id="stop">■ Dừng</button><button class="btn ghost" id="tog">Hiện lời thoại 听力材料</button></div>
+<span class="mute" id="status"></span>
+</div>
+<div id="app"></div>
+</main>
+<script>
+const $=(s,e=document)=>e.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const norm=s=>s.replace(/[\s，。、,.！？!?；;：:“”"']/g,'');
+const scores={};
+function setScore(id,p){scores[id]=p;let t=0;for(const k in scores)t+=scores[k];$('#score').textContent=Number.isInteger(t)?t:t.toFixed(1)}
+
+/* ---------- DỮ LIỆU ---------- */
+const D=[
+[['女','你现在去哪儿？'],['男','我去图书馆借词典，然后坐地铁回家。']],
+[['男','你怎么生气了？'],['女','你借了我的词典，答应昨天还给我，可是到现在还没还。','你借了我的词典，答应昨天环给我，可是到现在还没环。']],
+[['女','小云，爷爷给你买了什么？'],['男','爷爷给我买了一份礼物，是一本介绍中国文化的书。']],
+[['男','外面天气怎么样？你怎么没出去？'],['女','外面刮风了，而且我还要打扫房间。']],
+[['女','你打算怎么提高汉语水平？'],['男','我每天练习写句子，还会上网看中文新闻。']]];
+const LQ=[
+['男生要去哪里？',['图书馆','地铁站','学校'],[0]],
+['女生为什么生气？',['因为男生忘记还词典了。','因为男生没有吃饭。','因为男生没有发电子邮件。'],[0]],
+['爷爷给小云买了什么？',['一双筷子','一件礼物','一个行李箱'],[1]],
+['小云为什么没有出去？',['因为外面下雨了。','因为她要打扫房间。','因为她要去留学。'],[1],'Hội thoại nói 外面刮风了 (có gió, không phải mưa) và 我还要打扫房间.'],
+['男生想怎样提高汉语水平？',['每天练习写句子。','每天看菜单。','每天买礼物。'],[0]]];
+const W=['习惯','护照','司机','干净','提高','新闻'];
+const F=[['出国以前，一定要检查自己的','带了没有。','护照'],['这间教室很','，我们不用再打扫了。','干净'],['爸爸每天早上都看电视上的','。','新闻'],['我已经','了早上六点起床。','习惯'],['为了','汉语水平，他每天都认真练习。','提高'],['我们请','把行李送到机场。','司机']];
+const B2=[['飞机马上就要________了，我们快进去吧。',['起飞','结束','救'],[0]],['妈妈把苹果放进________里。',['黑板','冰箱','地铁'],[1]],['这道题很________，大家都能做出来。',['坏','极其','简单'],[2]]];
+const S=[[['关了','别忘了','把','灯'],['别忘了把灯关了']],
+[['放在','请','行李箱','把','这儿'],['请把行李箱放在这儿']],
+[['打','贵','车','太','了','，','回来','我','是','走','的'],['打车太贵了我是走回来的']],
+[['除了','以外','他','，','都','其他人','都','参加','比赛'],['除了他以外其他人都参加比赛']],
+[['什么','小云','都','买','没有'],['小云什么都没有买','小云什么都没买']]];
+const G=[['请你把电子邮件________。',['发出去','出去发','发了出去把'],[0]],['他从图书馆________了。',['走回来','走回来了','回来走了'],[0]],['除了小云________，其他人都愿意在北京工作。',['以外','以后','以前'],[0]],['你想吃什么________吃什么，不用客气。',['把','就','才'],[1]],['终于考上了北京大学，她高兴________。',['极了','非常','很'],[0]]];
+const E=[['请把名字写在黑板上了。',['请把名字写在黑板上'],'Câu cầu khiến (请…) không thêm 了 ở cuối.'],
+['他走进来教室了。',['他走进教室来了','他走进教室了'],'Tân ngữ nơi chốn đặt giữa 进 và 来: 走进教室来.'],
+['除了爷爷以外，奶奶也没来，其他人都来了。',['除了爷爷和奶奶以外其他人都来了','除了爷爷奶奶以外其他人都来了'],'Gộp thành 除了爷爷和奶奶以外，bỏ 也没来.'],
+['昨天我什么都买了。',['昨天我什么都没买','昨天我什么都没有买'],'“什么都” đi với phủ định: 什么都没买.'],
+['我每天一边听故事，一边也看书。',['我每天一边听故事一边看书'],'“一边…一边…” không chen thêm 也.']];
+const P=['小云准备去中国留学。出发以前，妈妈帮她检查行李箱。妈妈发现她忘记带护照了，就提醒她赶快去拿。小云回到房间，把护照放进包里，又把需要的东西整理好。','晚上，爷爷和奶奶来看她。爷爷送给她一份礼物，希望她在中国的生活越来越好。奶奶告诉她，到了中国以后，应该经常和家里人联系。小云很愿意听他们的话，也决定每天练习汉语，提高自己的水平。','第二天，飞机起飞以前，小云给家里发了一封电子邮件。她说，除了学习以外，她还想了解中国的节日和文化。'];
+const R=[['小云出发以前忘记带护照了。',0],['妈妈把护照放进了自己的包里。',1],['爷爷希望小云在中国生活得好。',0],['小云不愿意练习汉语。',1],['小云除了学习，还想了解中国文化。',0]];
+const W6=[['终于','经过一年的努力，他终于考上了北京大学。'],['一边……一边……','我喜欢一边听音乐，一边做作业。'],['除了……以外……','除了小王以外，大家都来了。'],['应该','出国以前，你应该先检查护照。'],['怎么……都……','这个字我怎么写都写不好。']];
+
+/* ---------- HÀM DỰNG GIAO DIỆN ---------- */
+const app=$('#app');
+function sec(t,s){const d=el('section');d.append(el('h2','',t+(s?' <small>'+s+'</small>':'')));app.append(d);return d}
+function card(p,n,h){const c=el('div','card');if(n!=null||h)c.append(el('div','qt',(n!=null?'<span class="n">'+n+'</span>':'')+(h?'<span class="zh">'+h+'</span>':'')));p.append(c);return c}
+function fb(c,ok,x){let f=c.querySelector('.fb');if(!f){f=el('div','fb');c.append(f)}f.className='fb '+(ok?'g':'r');f.innerHTML=(ok?'✓ Chính xác':'✗ Chưa đúng')+(x?' · '+x:'')}
+function mcq(c,id,o,a,pts,lab,note){const w=el('div','opts');lab=lab||'ABC';
+ o.forEach((t,i)=>{const b=el('button','opt','<b>'+lab[i]+'.</b><span class="zh">'+t+'</span>');
+  b.onclick=()=>{if(w.dataset.d)return;w.dataset.d=1;const ok=a.includes(i);a.forEach(k=>w.children[k].classList.add('ok'));if(!ok)b.classList.add('no');setScore(id,ok?pts:0);fb(c,ok,note||'')};w.append(b)});c.append(w)}
+function check(c,id,pts,ans,inp,note){const go=()=>{const ok=ans.includes(norm(inp.value));inp.className='zh '+(ok?'ok':'no');setScore(id,ok?pts:0);fb(c,ok,'Đáp án: <span class="zh">'+ans[0]+'。</span> '+note)};return go}
+
+function render(){
+ app.innerHTML='';for(const k in scores)delete scores[k];setScore('x',0);
+ /* 一 */
+ let s=sec('');s.firstChild.remove();
+ D.forEach((d,i)=>{const q=LQ[i];const c=card(s,i+1,q[0]);c.dataset.i=i;
+  c.querySelector('.qt').append(el('button','btn ghost','▶ Nghe'));
+  c.querySelector('.btn').style.marginLeft='auto';c.querySelector('.btn').onclick=()=>play([i]);
+  c.append(el('div','tr zh',d.map(l=>'<div>'+l[0]+'：'+l[1]+'</div>').join('')));
+  mcq(c,'l'+i,q[1],q[2],2,'ABC',q[3])});
+ /* 二 */
+ s=sec('二、词语运用','15分');
+ s.append(el('h3','','A. 选词填空 <small>每题1.5分 · mỗi từ chỉ dùng một lần</small>'));
+ s.append(el('div','bank zh',W.map(w=>'<span>'+w+'</span>').join('')));
+ F.forEach((f,i)=>{const c=card(s,i+1,f[0]+'<span class="slot"></span>'+f[1]);
+  const sel=el('select','zh','<option value="">选择</option>'+W.map(w=>'<option>'+w+'</option>').join(''));
+  c.querySelector('.slot').append(sel);
+  sel.onchange=()=>{const ok=sel.value==f[2];sel.className='zh '+(sel.value?(ok?'ok':'no'):'');setScore('f'+i,ok?1.5:0)}});
+ s.append(el('h3','','B. 选择正确答案 <small>每题2分</small>'));
+ B2.forEach((b,i)=>{const c=card(s,i+1,b[0]);mcq(c,'b'+i,b[1],b[2],2)});
+ /* 三 */
+ s=sec('三、排列句子','15分 · 每题3分 · bấm từ để xếp câu');
+ S.forEach((t,i)=>{const c=card(s,i+1,'');const ans=el('div','ans zh'),pool=el('div','pool zh');
+  t[0].forEach(w=>{const b=el('button','chip',w);b.onclick=()=>{(b.parentNode==pool?ans:pool).append(b);ans.className='ans zh'};pool.append(b)});
+  const bt=el('button','btn','Kiểm tra'),cl=el('button','btn ghost','Xóa');
+  bt.onclick=()=>{const x=[...ans.children].map(e=>e.textContent).join('');const ok=t[1].includes(norm(x));ans.className='ans zh '+(ok?'ok':'no');setScore('s'+i,ok?3:0);
+   fb(c,ok,ok?'':'Đáp án: <span class="zh">'+t[1][0]+'。</span>'+(i==3?' <span class="mute">(đề có 2 chữ 都, chỉ cần dùng 1)</span>':''))};
+  cl.onclick=()=>{[...ans.children].forEach(e=>pool.append(e));ans.className='ans zh'};
+  const r=el('div','row');r.append(bt,cl);c.append(ans,pool,r)});
+ /* 四 */
+ s=sec('四、语法选择与改错','20分');
+ s.append(el('h3','','A. 选择正确答案 <small>每题2分</small>'));
+ G.forEach((g,i)=>{const c=card(s,i+1,g[0]);mcq(c,'g'+i,g[1],g[2],2)});
+ s.append(el('h3','','B. 找出错误并改正 <small>每题2分</small>'));
+ E.forEach((e,i)=>{const c=card(s,i+1,e[0]);const inp=el('input','zh');inp.placeholder='修改：……';
+  const go=check(c,'e'+i,2,e[1],inp,e[2]);const bt=el('button','btn','Kiểm tra');bt.onclick=go;inp.onkeydown=ev=>{if(ev.key=='Enter')go()};
+  const r=el('div','row');r.append(inp,bt);c.append(r)});
+ /* 五 */
+ s=sec('五、阅读理解','15分 · 判断正误，每题3分');
+ s.append(el('div','card zh passage',P.map(p=>'<p>'+p+'</p>').join('')));
+ R.forEach((r,i)=>{const c=card(s,i+1,r[0]);mcq(c,'r'+i,['对','错'],[r[1]],3,'✓✗')});
+ /* 六 */
+ s=sec('六、根据要求完成句子','15分 · 每题3分 · tự viết rồi so với câu mẫu');
+ W6.forEach((w,i)=>{const c=card(s,i+1,'使用“'+w[0]+'”造句。');const t=el('textarea','zh');t.placeholder='在这里写句子……';
+  const bt=el('button','btn ghost','Xem câu mẫu');const m=el('div','fb g zh');m.style.display='none';m.textContent=w[1];
+  bt.onclick=()=>{m.style.display=m.style.display=='none'?'block':'none'};
+  const r=el('div','row');r.append(bt);c.append(t,r,m)});
+ s.append(el('p','mute','考试结束，请检查答案。'));
+}
+
+/* ---------- ÂM THANH (giọng đọc tiếng Trung phổ thông của trình duyệt) ---------- */
+let V=[],gen=0;
+const isZh=v=>/^(zh|cmn)[-_](hans[-_])?cn$/i.test(v.lang)||/Xiaoxiao|Yunxi|Tingting|Ting-Ting/i.test(v.name);
+const FEM=/Xiao(xiao|yi|han|mo)|Ting|Huihui|Yaoyao|Lili|Female|Yu-?shu|Hanhan/i,MAL=/Yun(xi|yang|jian|hao|ze)|Kangkang|Male|Li-?mu/i;
+const rank=v=>(/Natural|Online/i.test(v.name)?10:0)+(/Xiao(xiao|yi)|Yun(xi|yang|jian)/i.test(v.name)?5:0)+(/Google/i.test(v.name)?3:0)+(/Ting|Lili/i.test(v.name)?2:0);
+function loadVoices(){
+ if(!('speechSynthesis' in window)){$('#warn').style.display='block';return}
+ V=speechSynthesis.getVoices().filter(isZh).sort((a,b)=>rank(b)-rank(a));
+ $('#warn').style.display=V.length?'none':'block';
+ const o=V.map((v,i)=>'<option value="'+i+'">'+v.name+'</option>').join('');
+ const f=$('#vf'),m=$('#vm'),pf=f.value,pm=m.value;f.innerHTML=o;m.innerHTML=o;
+ if(pf!==''&&V[pf]){f.value=pf;m.value=pm;return}
+ const fi=V.findIndex(v=>FEM.test(v.name)),mi=V.findIndex(v=>MAL.test(v.name));
+ f.value=fi>=0?fi:0;m.value=mi>=0?mi:0;
+}
+if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const speak=(t,g)=>new Promise(r=>{
+ const u=new SpeechSynthesisUtterance(t);const v=V[$(g=='女'?'#vf':'#vm').value];
+ if(v){u.voice=v;u.lang=v.lang}else u.lang='zh-CN';
+ u.rate=+$('#rate').value;
+ u.pitch=g=='女'?+$('#pit').value:($('#vf').value===$('#vm').value?.8:1);
+ u.onend=u.onerror=()=>r();speechSynthesis.speak(u)});
+async function play(list){
+ if(!('speechSynthesis' in window))return;
+ const my=++gen;speechSynthesis.cancel();await sleep(200);
+ for(const i of list){
+  if(my!=gen)return;
+  document.querySelectorAll('.card.play').forEach(c=>c.classList.remove('play'));
+  const c=$('.card[data-i="'+i+'"]');c.classList.add('play');$('#status').textContent='Đang phát câu '+(i+1)+'…';
+  await speak('第'+'一二三四五'[i]+'题','女');await sleep(700);
+  for(let k=0;k<($('#twice').checked?2:1);k++){
+   for(const l of D[i]){if(my!=gen)return;await speak(l[2]||l[1],l[0]);await sleep(500)}
+   if(my!=gen)return;await sleep(1800);
+  }
+  c.classList.remove('play');
+ }
+ if(my==gen)$('#status').textContent='Đã phát xong.';
+}
+function stop(){gen++;speechSynthesis.cancel();document.querySelectorAll('.card.play').forEach(c=>c.classList.remove('play'));$('#status').textContent=''}
+$('#all').onclick=()=>play([0,1,2,3,4]);
+$('#stop').onclick=stop;
+$('#tog').onclick=()=>{const on=document.body.classList.toggle('showT');$('#tog').textContent=on?'Ẩn lời thoại 听力材料':'Hiện lời thoại 听力材料'};
+$('#reset').onclick=()=>{stop();render()};
+render();
+</script>
+</body>
+</html>
